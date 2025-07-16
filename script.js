@@ -50,6 +50,3 @@ searchButton.addEventListener("click", () => {
     checkWeather(searchBox.value); // it will pass the city value 
 })
 
-
-checkWeather(city);
-console.log("After Function call to checkWeather");
