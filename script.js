@@ -22,5 +22,5 @@ searchButton.addEventListener("click", () => {
 })
 
 
-checkWeather();
+checkWeather(city);
 console.log("After Function call to checkWeather");
