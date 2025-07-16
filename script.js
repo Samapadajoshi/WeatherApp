@@ -49,4 +49,3 @@ async function checkWeather(city) {
 searchButton.addEventListener("click", () => {
     checkWeather(searchBox.value); // it will pass the city value 
 })
-
