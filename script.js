@@ -1,8 +1,11 @@
 const apiKey = "5d57d62e4175c4884dae0bdcd78ca00b";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=dhanki";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-async function checkWeather() {
-    const response = await fetch(apiUrl + `&appid=${apiKey}`);
+const searchBox = document.querySelector(".search input");
+const searchButton = document.querySelector(".search button");
+
+async function checkWeather(city) {
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     var data = await response.json();
 
     console.log(data);
@@ -13,6 +16,11 @@ async function checkWeather() {
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
 }
+
+searchButton.addEventListener("click", () => {
+    checkWeather(searchBox.value); // it will pass the city value 
+})
+
 
 checkWeather();
 console.log("After Function call to checkWeather");
