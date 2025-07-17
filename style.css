@@ -44,6 +44,7 @@ body {
     border: 0;
     outline: 0;
     background: #ebfffc;
+    border-radius: 50%;
     width: 60px;
     height: 60px;
     cursor: pointer;
@@ -105,3 +106,59 @@ body {
     margin-top: 10px;
     display: none;
 }
+
+/*This code is for mobile  start */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+        margin: 50px auto 0;
+    }
+
+    .search input {
+        height: 50px;
+        font-size: 16px;
+        padding: 8px 20px;
+        margin-right: 10px;
+    }
+
+    .search button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .search button img {
+        width: 14px;
+    }
+
+    .weather-icon {
+        width: 120px;
+        margin-top: 20px;
+    }
+
+    .weather h1 {
+        font-size: 50px;
+    }
+
+    .weather h2 {
+        font-size: 28px;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .col img {
+        width: 30px;
+    }
+
+    .humidity,
+    .wind {
+        font-size: 20px;
+    }
+}
+
+/*This code is for mobile  ends */
